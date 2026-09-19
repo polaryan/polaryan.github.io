@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="cs1.5小人国地图下载、玩法攻略、点位图解及战术分析。提供高清小人国（Dust2 Mini）地图资源，助你提升CS1.5竞技水平。">
+    <meta name="keywords" content="cs1.5小人国地图,CS1.5地图,小人国Dust2,CS1.5下载,CS1.5攻略">
+    <title>cs1.5小人国地图-经典迷你地图下载与实战点位攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #bfa15f;
+            --secondary-color: #2c2c2c;
+            --accent-color: #d32f2f;
+            --bg-color: #1a1a1a;
+            --card-bg: #252525;
+            --text-color: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/cs15map/1200/600') no-repeat center center/cover;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #d4af37;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--primary-color);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #333;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #333;
+            padding-top: 12px;
+        }
+
+        /* Map Info Box */
+        .map-info-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--primary-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+        }
+
+        .map-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        /* Strategy List */
+        .strategy-list {
+            list-style: none;
+        }
+
+        .strategy-item {
+            background-color: var(--card-bg);
+            margin-bottom: 12px;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .strategy-icon {
+            background-color: #333;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        /* Download Section */
+        .download-section {
+            background-color: #000;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .file-list {
+            list-style: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .file-item {
+            background-color: #222;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #333;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .file-size {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .map-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <span>CS1.5</span>地图之家
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">地图下载</a></li>
+                    <li><a href="#">战术攻略</a></li>
+                    <li><a href="#">论坛交流</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>cs1.5小人国地图</h1>
+                <p>重温经典。体验Dust2的微缩版魅力。更快的节奏，更紧凑的战术博弈，专为追求极致反应速度的CS1.5玩家打造。</p>
+                <a href="#download" class="btn">立即下载地图资源</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Map Overview -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">地图概览：小人国 (Dust2 Mini)</h2>
+                </div>
+                <div class="grid-2">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/dust2mini/600/400" alt="小人国地图俯瞰示意图" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">地图简介</h3>
+                            <p class="card-text">小人国是经典反恐精英1.5地图Dust2的微缩版本。地图尺寸仅为原版的1/4左右，但保留了经典的A/B两路结构和沙漠地形特征。由于地图极小，对枪节奏极快，非常适合快速对局练习。</p>
+                        </div>
+                    </article>
+                    <div class="map-info-box">
+                        <h3 class="card-title" style="margin-bottom: 20px;">核心数据</h3>
+                        <div class="map-info-grid">
+                            <div class="info-item">
+                                <strong>地图类型</strong>
+                                <span>爆破模式 (DE)</span>
+                            </div>
+                            <div class="info-item">
+                                <strong>地图尺寸</strong>
+                                <span>微缩版 (约 256x256)</span>
+                            </div>
+                            <div class="info-item">
+                                <strong>推荐模式</strong>
+                                <span>死斗, 竞技, 混战</span>
+                            </div>
+                            <div class="info-item">
+                                <strong>主要点位</strong>
+                                <span>A路, B路, 中路, 隧道</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strategy Guide -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">实战点位与战术攻略</h2>
+                    <a href="#">查看更多战术 &rarr;</a>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">中路控制</h3>
+                            <p class="card-text">在中路只有几步之遥的情况下，控制中路意味着控制整张地图。建议使用AWP或雷神等高伤害武器快速架枪，防止CT从隧道偷袭。</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">A路战术</h3>
+                            <p class="card-text">A路相对开阔，但掩体极少。T方建议利用烟雾弹封锁隧道入口，快速拉出A包点。CT方需在A平台进行密集防守。</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">B路防守</h3>
+                            <p class="card-text">B路入口狭窄，适合防守。CT可以利用这里的墙体进行回防。T方若强行突破，极易在路口遭遇集火，建议使用闪光弹配合闪光弹战术。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Download Section -->
+            <section id="download">
+                <div class="download-section">
+                    <h2 class="section-title" style="margin-bottom: 20px;">地图资源下载</h2>
+                    <p style="color: #aaa; margin-bottom: 20px;">请根据您的游戏版本选择对应的地图包</p>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <div class="file-info">
+                                <span style="color: #4CAF50;">★</span>
+                                <div>
+                                    <strong>cs15小人国地图 v1.0 (完整版)</strong>
+                                    <span class="file-size">包含地图文件 + 声音包</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">下载</a>
+                        </li>
+                        <li class="file-item">
+                            <div class="file-info">
+                                <span style="color: #2196F3;">★</span>
+                                <div>
+                                    <strong>小人国点位图高清版</strong>
+                                    <span class="file-size">PNG 格式 / 1.2 MB</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">下载</a>
+                        </li>
+                        <li class="file-item">
+                            <div class="file-info">
+                                <span style="color: #FF9800;">★</span>
+                                <div>
+                                    <strong>小人国旧版 (复古怀旧)</strong>
+                                    <span class="file-size">2008年经典版本</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">下载</a>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 30px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.85rem; color: #888;">
+                        <strong>安装说明：</strong> 将下载的地图文件解压至您的 Counter-Strike 1.5 安装目录下的 'maps' 文件夹中。
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">常见问题 (FAQ)</h2>
+                </div>
+                <div class="card" style="padding: 20px;">
+                    <details style="margin-bottom: 15px; cursor: pointer;">
+                        <summary style="font-weight: bold; color: var(--primary-color);">Q: cs1.5小人国地图怎么安装？</summary>
+                        <p style="margin-top: 10px; color: var(--text-muted);">下载压缩包后，解压文件。找到您的CS1.5安装目录（通常在 C:\Program Files\Valve\cstrike\maps），将地图文件（.bsp）复制进去即可。重启游戏后进入控制台输入 "map dust2_mini" 即可进入。</p>
+                    </details>
+                    <details style="margin-bottom: 15px; cursor: pointer;">
+                        <summary style="font-weight: bold; color: var(--primary-color);">Q: 小人国地图有什么特殊机制吗？</summary>
+                        <p style="margin-top: 10px; color: var(--text-muted);">小人国地图主要特点是尺寸极小，因此移动速度和换弹速度在实战中会感觉非常快。地图中保留了经典Dust2的狙击架点，适合练习瞬镜和反应速度。</p>
+                    </details>
+                    <details style="cursor: pointer;">
+                        <summary style="font-weight: bold; color: var(--primary-color);">Q: 地图兼容性如何？</summary>
+                        <p style="margin-top: 10px; color: var(--text-muted);">本地图专为CS 1.5版本设计，兼容大多数基于GoldSrc引擎的1.5版本，如原版、STEAM版及非STEAM版。</p>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于本站</a>
+                <a href="#">免责声明</a>
+                <a href="#">地图投稿</a>
+                <a href="#">联系站长</a>
+            </div>
+            <p>&copy; 2023 CS1.5地图之家. All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #555;">Counter-Strike 1.5 是 Valve Corporation 的注册商标。本站仅提供资源分享与攻略服务。</p>
+        </div>
+    </footer>
+
+</body>
+  </html>
