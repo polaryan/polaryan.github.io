@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="本站提供关于妹妹角色形象的艺术创作、角色设计与二次元文化相关资讯。内容聚焦于二次元艺术欣赏与角色美学探讨。">
+    <meta name="keywords" content="妹妹色图,二次元,动漫角色设计,二次元艺术,角色美学">
+    <title>妹妹色图-二次元角色艺术与形象设计欣赏</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+            --spacing-unit: 1rem;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-color: #e0e0e0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            background: rgba(108, 92, 231, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+            width: fit-content;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: #b2bec3;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #5649c0;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: white;
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .info-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .info-text p {
+            color: var(--text-sub);
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 50px 0 20px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #b2bec3;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #636e72;
+            font-size: 0.9rem;
+            color: #636e72;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                角色美学
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">分类浏览</a></li>
+                    <li><a href="#">热门榜单</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>探索二次元角色艺术</h1>
+        <p>汇聚各类角色设定、二次元插画与形象设计，展现独特的艺术风格与美学视角。</p>
+    </section>
+
+    <main class="container">
+        
+        <section>
+            <h2 class="section-title">精选角色作品</h2>
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/anime1/400/300" alt="二次元角色插画">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">日常系</span>
+                        <h3 class="card-title">校园午后时光</h3>
+                        <p class="card-desc">描绘了放学后的校园一角，阳光透过树叶洒下的斑驳光影，展现了青春的活力与宁静。</p>
+                        <div class="card-footer">
+                            <span class="card-meta">2023-10-24</span>
+                            <a href="#" class="btn">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/anime2/400/300" alt="二次元角色插画">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">幻想风</span>
+                        <h3 class="card-title">星空下的约定</h3>
+                        <p class="card-desc">结合了奇幻元素与浪漫主义色彩，描绘了角色在星河背景下许下愿望的唯美场景。</p>
+                        <div class="card-footer">
+                            <span class="card-meta">2023-10-23</span>
+                            <a href="#" class="btn">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/anime3/400/300" alt="二次元角色插画">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">运动系</span>
+                        <h3 class="card-title">运动场上的瞬间</h3>
+                        <p class="card-desc">捕捉了竞技体育中的动态瞬间，通过线条的流动表现出速度感与爆发力。</p>
+                        <div class="card-footer">
+                            <span class="card-meta">2023-10-22</span>
+                            <a href="#" class="btn">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/anime4/400/300" alt="二次元角色插画">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">复古风</span>
+                        <h3 class="card-title">昭和时代的记忆</h3>
+                        <p class="card-desc">采用了复古的色调与构图，致敬经典动漫风格，唤起观众对那个时代的怀旧情感。</p>
+                        <div class="card-footer">
+                            <span class="card-meta">2023-10-21</span>
+                            <a href="#" class="btn">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="info-grid">
+                <div class="info-image">
+                    <img src="https://picsum.photos/seed/artstyle/600/400" alt="艺术创作过程" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow);">
+                </div>
+                <div class="info-text">
+                    <h2>角色设计的魅力</h2>
+                    <p>二次元角色设计是动漫与游戏产业的核心环节。优秀的角色设计不仅需要具备独特的视觉形象，还需要通过服装、发型、配饰等细节传达角色的性格、背景与故事。</p>
+                    <p>从线条的勾勒到色彩的填充，每一个步骤都凝聚了创作者的心血。我们致力于分享这些精彩的作品，为爱好者提供一个欣赏与交流的平台。</p>
+                    <ul class="feature-list">
+                        <li><span class="feature-icon">✓</span> 严格遵循平台规范与法律法规</li>
+                        <li><span class="feature-icon">✓</span> 提供高清无水印作品展示</li>
+                        <li><span class="feature-icon">✓</span> 多样化的艺术风格分类</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">热门分类</h2>
+            <div class="gallery-grid">
+                <article class="card" style="border: 2px solid #f1f2f6;">
+                    <div class="card-content" style="align-items: center; justify-content: center; text-align: center; min-height: 200px;">
+                        <h3 style="color: var(--text-sub);">更多分类</h3>
+                    </div>
+                </article>
+                <article class="card" style="border: 2px solid #f1f2f6;">
+                    <div class="card-content" style="align-items: center; justify-content: center; text-align: center; min-height: 200px;">
+                        <h3 style="color: var(--text-sub);">查看排行</h3>
+                    </div>
+                </article>
+                <article class="card" style="border: 2px solid #f1f2f6;">
+                    <div class="card-content" style="align-items: center; justify-content: center; text-align: center; min-height: 200px;">
+                        <h3 style="color: var(--text-sub);">最新上传</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <ul>
+                    <li><a href="#">网站简介</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">加入我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>内容分类</h4>
+                <ul>
+                    <li><a href="#">插画欣赏</a></li>
+                    <li><a href="#">角色设定</a></li>
+                    <li><a href="#">同人作品</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>法律声明</h4>
+                <ul>
+                    <li><a href="#">用户协议</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">版权指引</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 角色美学展示平台. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
