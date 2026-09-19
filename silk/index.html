@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silk labo官网 - 专业皮肤屏障修复与敏感肌护理解决方案</title>
+    <meta name="description" content="silk labo官网提供专业的皮肤屏障修复系列护肤品。针对敏感肌、泛红、干燥等问题，采用丝素蛋白与神经酰胺配方，温和修护，重建肌肤健康屏障。查看产品详情、成分解析及护肤指南。">
+    <meta name="keywords" content="silk labo,丝素蛋白,敏感肌护肤,屏障修复,丝滑肤感,官方旗舰店">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e8d5b7;
+            --secondary-color: #d4a373;
+            --accent-color: #faedcd;
+            --text-dark: #2c2c2c;
+            --text-gray: #666666;
+            --bg-light: #fdfbf7;
+            --bg-white: #ffffff;
+            --spacing-unit: 8px;
+            --container-width: 1200px;
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-icon {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: var(--text-dark);
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--bg-white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--secondary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(135deg, #fdfbf7 0%, #f5efe6 100%);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 50px;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: rgba(232, 213, 183, 0.3);
+            color: var(--secondary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero h1 span {
+            color: var(--secondary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 500px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(212, 163, 115, 0.2);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Features Bar */
+        .features-bar {
+            background-color: var(--bg-white);
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 12px;
+            color: var(--text-gray);
+        }
+
+        /* Product Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--bg-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .product-image {
+            height: 300px;
+            background-color: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-cat {
+            font-size: 12px;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            margin: 5px 0 10px;
+            font-weight: 600;
+        }
+
+        .product-desc {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .btn-sm {
+            padding: 6px 15px;
+            font-size: 12px;
+            border-radius: 15px;
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
+            background: transparent;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-sm:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Ingredients Section */
+        .ingredients-section {
+            background-color: var(--bg-white);
+        }
+
+        .ingredients-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .ingredients-content {
+            flex: 1;
+        }
+
+        .ingredients-list {
+            margin-top: 30px;
+        }
+
+        .ingredient-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .ingredient-item h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .ingredient-item p {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .ingredients-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .ingredients-image img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Skincare Guide */
+        .guide-section {
+            background-color: #f5efe6;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .guide-card {
+            background-color: var(--bg-white);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .guide-number {
+            font-size: 60px;
+            font-weight: 700;
+            color: rgba(212, 163, 115, 0.2);
+            line-height: 1;
+            margin-bottom: -20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .guide-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .guide-text {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--secondary-color);
+        }
+
+        .icon-plus {
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--bg-white);
+        }
+
+        .footer-brand p {
+            color: #999;
+            font-size: 14px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--bg-white);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .newsletter-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0 15px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                height: auto;
+                padding: 60px 0;
+                text-align: center;
+            }
+
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                margin: 0 auto 30px;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ingredients-container {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-inner {
+                padding: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">silk labo<span>.</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#products">护肤系列</a></li>
+                    <li><a href="#ingredients">核心成分</a></li>
+                    <li><a href="#guide">护肤指南</a></li>
+                    <li><a href="#about">关于品牌</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-icon" aria-label="搜索">🔍</button>
+                <button class="btn-icon" aria-label="购物车">🛒</button>
+                <a href="#" class="btn-primary">立即咨询</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container" style="display: flex; align-items: center; width: 100%; flex-wrap: wrap;">
+                <div class="hero-content">
+                    <span class="hero-tag">2024年度新品</span>
+                    <h1>丝滑触感，<br><span>重塑肌肤屏障</span></h1>
+                    <p>silk labo 独家丝素蛋白配方，专为敏感肌与受损肌肤设计。温和修护，恢复肌肤健康光泽与强韧屏障。</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#products" class="btn-primary" style="padding: 12px 30px; font-size: 16px;">探索系列</a>
+                        <a href="#guide" style="padding: 12px 30px; font-size: 16px; border: 1px solid #ccc; border-radius: 20px;">查看指南</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- 使用随机图片模拟产品展示 -->
+                    <img src="https://picsum.photos/seed/silklabo1/500/600" alt="丝滑修护精华霜">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Bar -->
+        <div class="features-bar">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="feature-icon">🌱</span>
+                        <div class="feature-title">100% 纯植萃</div>
+                        <div class="feature-desc">无酒精、无香精、无矿物油</div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔬</span>
+                        <div class="feature-title">皮肤科测试</div>
+                        <div class="feature-desc">通过敏感肌临床测试认证</div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💧</span>
+                        <div class="feature-title">强效保湿</div>
+                        <div class="feature-desc">锁水因子，长效保湿</div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🛡️</span>
+                        <div class="feature-title">屏障修护</div>
+                        <div class="feature-desc">重建角质层，抵御外界刺激</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Section -->
+        <section id="products" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>明星护肤系列</h2>
+                    <p>根据不同肌肤需求，提供针对性修护方案</p>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge">热销</span>
+                            <img src="https://picsum.photos/seed/silkcream/400/500" alt="丝素蛋白修护精华霜">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-cat">精华霜</div>
+                            <h3 class="product-title">丝滑修护精华霜</h3>
+                            <p class="product-desc">富含高浓度丝素蛋白，深入肌底修护受损屏障，带来如丝绸般的顺滑触感。</p>
+                            <div class="product-footer">
+                                <span class="price">¥ 328.00</span>
+                                <button class="btn-sm">立即购买</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/silktoner/400/500" alt="舒缓平衡爽肤水">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-cat">爽肤水</div>
+                            <h3 class="product-title">舒缓平衡爽肤水</h3>
+                            <p class="product-desc">温和收敛毛孔，平衡肌肤酸碱度，为后续护肤打好基础。</p>
+                            <div class="product-footer">
+                                <span class="price">¥ 168.00</span>
+                                <button class="btn-sm">立即购买</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge">新品</span>
+                            <img src="https://picsum.photos/seed/silkserum/400/500" alt="夜间修护精华液">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-cat">精华液</div>
+                            <h3 class="product-title">夜间修护精华液</h3>
+                            <p class="product-desc">夜间修护黄金期，促进细胞再生，淡化细纹与暗沉。</p>
+                            <div class="product-footer">
+                                <span class="price">¥ 458.00</span>
+                                <button class="btn-sm">立即购买</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/silkmask/400/500" alt="急救修护面膜">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-cat">面膜</div>
+                            <h3 class="product-title">急救修护面膜</h3>
+                            <p class="product-desc">5分钟急救，瞬间舒缓泛红与紧绷，恢复水润透亮。</p>
+                            <div class="product-footer">
+                                <span class="price">¥ 128.00</span>
+                                <button class="btn-sm">立即购买</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ingredients Section -->
+        <section id="ingredients" class="section ingredients-section">
+            <div class="container ingredients-container">
+                <div class="ingredients-image">
+                    <img src="https://picsum.photos/seed/silkflower/600/400" alt="天然植物成分">
+                </div>
+                <div class="ingredients-content">
+                    <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                        <h2>核心成分解析</h2>
+                        <p>科学配比，精准修护，让护肤更有效</p>
+                    </div>
+                    <div class="ingredients-list">
+                        <div class="ingredient-item">
+                            <h4>丝素蛋白 (Silk Protein)</h4>
+                            <p>源自天然蚕丝，富含18种氨基酸。能迅速渗透肌肤，形成保护膜，增强肌肤弹性与光泽。</p>
+                        </div>
+                        <div class="ingredient-item">
+                            <h4>神经酰胺复合物</h4>
+                            <p>模拟肌肤天然皮脂膜结构，填补细胞间隙，锁住水分，有效抵御外界环境刺激。</p>
+                        </div>
+                        <div class="ingredient-item">
+                            <h4>积雪草提取物</h4>
+                            <p>天然舒缓成分，促进肌肤愈合，减少泛红不适，适合敏感肌日常使用。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skincare Guide -->
+        <section id="guide" class="section guide-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>丝滑护肤指南</h2>
+                    <p>专业的护肤流程建议，助你养出好肌肤</p>
+                </div>
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <div class="guide-number">01</div>
+                        <h3 class="guide-title">温和清洁</h3>
+                        <p class="guide-text">使用氨基酸洁面，避免过度清洁带走肌肤天然油脂，保持水油平衡。</p>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-number">02</div>
+                        <h3 class="guide-title">补水保湿</h3>
+                        <p class="guide-text">洁面后立即使用爽肤水轻拍，为肌肤补充水分，打开吸收通道。</p>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-number">03</div>
+                        <h3 class="guide-title">修护锁水</h3>
+                        <p class="guide-text">涂抹丝素精华霜或精华液，从内而外修护屏障，最后进行防晒。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于silk labo的使用疑问与解答</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">silk labo适合什么肤质使用？<span class="icon-plus">+</span></div>
+                        <div class="faq-answer">silk labo专为敏感肌、干性肌肤及受损肌肤设计。产品通过皮肤科临床测试，温和无刺激，所有肤质均可安心使用。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">孕妇可以使用吗？<span class="icon-plus">+</span></div>
+                        <div class="faq-answer">本系列产品不含孕妇慎用成分，但建议在首次使用前咨询医生或专业护肤顾问，确保无过敏反应。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">产品开封后保质期是多久？<span class="icon-plus">+</span></div>
+                        <div class="faq-answer">一般开封后建议在12个月内使用完毕，以保证最佳护肤效果。瓶身均有开封标识。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如果不小心过敏了怎么办？<span class="icon-plus">+</span></div>
+                        <div class="faq-answer">立即停止使用，并用清水洗净面部。如果症状持续或加重，请及时就医并保留产品包装以便追溯。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>silk labo.</h3>
+                    <p>专注敏感肌修护，以科学配方还原肌肤自然健康状态。丝滑体验，安心守护。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品系列</h4>
+                    <ul>
+                        <li><a href="#">精华霜</a></li>
+                        <li><a href="#">爽肤水</a></li>
+                        <li><a href="#">精华液</a></li>
+                        <li><a href="#">面膜</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#">使用指南</a></li>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">物流查询</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>订阅动态</h4>
+                    <p style="color:#999; font-size:14px; margin-bottom:10px;">获取最新护肤资讯与专属优惠</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感谢订阅！');">
+                        <input type="email" class="newsletter-input" placeholder="您的邮箱地址" required>
+                        <button type="submit" class="newsletter-btn">订阅</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 silk labo. All Rights Reserved. 本页面为设计演示，非真实官方网站。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                                                                               </html>
